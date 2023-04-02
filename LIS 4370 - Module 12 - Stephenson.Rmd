@@ -1,0 +1,37 @@
+---
+title: "Module 12"
+author: "Jarod Stephenson"
+date: "2023-04-02"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+```
+
+## Mtcars Analysis
+
+This code will analyze the built-in mtcars dataset by displaying summary statistics 
+and plotting the attributes of the dataset.
+
+```{r cars}
+summary(mtcars)
+
+#Displays the mean value of the mpg column in the mtcars dataset.
+mean(mtcars$mpg)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(mtcars)
+
+ggplot(mtcars, aes(x = cyl, y = mpg, color = gear)) +
+  geom_point() +
+  ggtitle("Mpg vs. Cyl")
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot. This concludes the Module #12 R Markdown assignment. 
